@@ -7,13 +7,11 @@ public class Main {
     public static void main(String[] args) {
 
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
-        var parrot = context.getBean(Parrot.class);
-        var eagle = context.getBean(Eagle.class);
-        parrot.setName("coco");
-        eagle.setName("samba");
+        var person = context.getBean(Person.class);
 
-        System.out.println(parrot);
-        System.out.println(eagle);
+        System.out.println("person's name: " + person.getName());
+        System.out.println("person's parrot: " + person.getParrot());
+
 
 /**       var parrot = context.getBean("parrot", Parrot.class);
        var parrot2 = context.getBean("parrot2", Parrot.class);
